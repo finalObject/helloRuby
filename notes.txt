@@ -29,3 +29,107 @@ end
 redApple = Apple.new
 redApple.color = 'red'
 puts "redApple.color:#{redApple.color}"
+
+class variable: @@name # 不同实例中通用的变量
+instance variable: @name # 实例内部自己的变量
+local variable: name # 作用域在该方法内
+global variable: $name # 全局变量呗
+
+> class Apple
+	@@from = 'China'
+	def get_from 
+		@@from
+	end
+	def set_from from
+		@@from = from
+	end
+end
+Apple.new.setFrom('Japan')
+
+>singleLine="abc"
+multipleLine=%Q{
+	abc
+	def
+}
+
+Symbol # 不变字符串类型
+> :abc
+> 'abc'.to_sym
+
+# 变量转字符串
+>#{a}
+
+# Array
+number = [1,2,3]
+ceils = [1,'tow',:three,{:name=>4}]
+
+# Hash
+>jim = {
+	:name => 'Jim',
+	:age => 20
+}
+# after Ruby1.9
+>jim ={
+	name:'Jim',
+	age:20
+}
+or
+>jim={}
+jim[:name]='Jim'
+jim[:age]=20
+
+if a==1
+	puts 'a is 1'
+elseif a==2
+	puts 'a is 2'
+else
+	puts 'a is not in [1,2]'
+end
+
+case a
+	when 1 then puts 'a is 1'
+	when 2 then puts 'a is 2'
+	when 3,4,5 then puts 'a is in [3,4,5]'
+	else puts 'a is not in [1,2,3,4,5]'
+end	
+
+> 1?'one':'two'
+
+for e in [1,2,3]
+	puts e
+end
+
+loop do
+	# code
+	break if <condition>
+end
+
+begin
+	# code 
+end while <condition>
+
+>puts '222'
+>puts(222)
+
+# 函数最后一行默认有return
+def apple
+	apple
+end
+
+# hash某些情况下打括号可以省略
+
+Module
+# 不能new，可以include，写法和class一样
+
+eval("a=2;b=2;puts a+2")
+
+
+
+
+
+
+
+
+
+
+
