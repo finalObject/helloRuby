@@ -1,2 +1,23 @@
 # 即时交互
-$ irb 
+$ irb
+
+# 数据类型
+Number,String,Bool,Array:[1,2,3],Hash:{:name=>"Jim",:age=>20}
+# 不需要变量申明
+# 命名规则，变量名下划线分割，类骆驼表达，（推荐而已）
+> class Apple
+	#Apple.new时自动调用
+	def initialize
+		#实例化一个变量
+		@color
+	end
+
+	# getter方法
+	def color
+		return @color
+	end
+	# setter方法
+	def color = color
+		@color = color
+	end
+end
