@@ -99,6 +99,10 @@ for e in [1,2,3]
 	puts e
 end
 
+[1,2,3].each do |e|
+	# code 
+end
+
 loop do
 	# code
 	break if <condition>
