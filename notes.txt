@@ -21,3 +21,11 @@ Number,String,Bool,Array:[1,2,3],Hash:{:name=>"Jim",:age=>20}
 		@color = color
 	end
 end
+# 另外一种ruby写法
+class Apple
+	# 实现变量实例化，setter和getter
+	attr_accessor 'color'
+end
+redApple = Apple.new
+redApple.color = 'red'
+puts "redApple.color:#{redApple.color}"
